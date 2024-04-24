@@ -1,0 +1,22 @@
+[package]
+name = "rustwm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+once_cell = "1.17.1"
+indexmap = { version = "1.9.3"}
+
+[dependencies.smithay]
+git = "https://github.com/Smithay/smithay.git"
+rev = "9459ddd"
+default-features = false
+features = [
+    "backend_winit",
+    "wayland_frontend",
+    "desktop",
+    "backend_session_libseat",
+    "backend_drm",
+    "renderer_multi",
+    "backend_libinput",
+]
